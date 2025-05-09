@@ -5,8 +5,8 @@
 LOG_DIR="/var/log/myapp"
 ARCHIVE_DIR="/var/log/myapp/archive"
 
-mkdir -p "$ARCHIVE_DIR"
-find "$LOG_DIR" -type f -name "*.log" -mtime +7 -exec gzip {} \; -exec mv {}.gz "$ARCHIVE_DIR" \;
+sudo mkdir -p "$ARCHIVE_DIR"
+sudo find "$LOG_DIR" -type f -name "*.log" -mtime +7 -exec gzip {} \; -exec mv {}.gz "$ARCHIVE_DIR" \;
 echo "Log rotation completed: $(date)"
 # End of script
 # This script rotates and compresses log files older than 7 days in the specified log directory.
