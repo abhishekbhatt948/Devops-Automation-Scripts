@@ -5,6 +5,9 @@
 ### `log_rotation.sh`
 - Rotates and compresses old log files daily to save disk space.
 
+### `log_deleation.sh`
+- run cron job to Rotates and compresses and delete old log files daily to save disk space.
+
 ### `disk_alert.sh`
 - Checks disk usage and alerts if it exceeds the threshold.
 
